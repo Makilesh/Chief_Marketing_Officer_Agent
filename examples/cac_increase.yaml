@@ -1,0 +1,21 @@
+# Example: CAC Increase Scenario
+# Usage: python main.py --config examples/cac_increase.yaml
+
+problem: |
+  CAC (Customer Acquisition Cost) increased 40% in last 30 days.
+  We need to diagnose the root cause and develop an action plan to bring CAC back down.
+
+context:
+  business_type: "B2B SaaS"
+  mrr: "$50K MRR"
+  current_channels: "Google Ads, LinkedIn, Content Marketing"
+  monthly_budget: "$5K/month"
+  historical_linkedin_roas: "2.1x"
+  historical_google_ads_roas: "1.4x"
+  google_ads_ctr_change: "-25% over last 30 days"
+  linkedin_ctr_change: "Stable"
+  content_traffic_change: "+10% but low conversion"
+  target_cac: "$150"
+  current_cac: "$210 (was $150)"
+  design_resources: "1 part-time designer available"
+  timeline_constraint: "Need results within 2 weeks"

@@ -1,0 +1,35 @@
+# AI CMO Multi-Agent System Dependencies
+# LangGraph + CrewAI Architecture
+
+# Core utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+
+# LangGraph for orchestration
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-core>=0.3.0
+
+# CrewAI for agent roles
+crewai>=0.80.0
+crewai-tools>=0.14.0
+
+# LLM Providers
+# Gemini 2.5 Flash (Primary)
+langchain-google-genai>=2.0.0
+google-generativeai>=0.8.0
+
+# Llama 3.1 via Groq (Fallback - fast inference)
+langchain-groq>=0.2.0
+
+# Alternative: Ollama for local Llama (uncomment if using local)
+langchain-ollama>=0.2.0
+
+# Data Models
+pydantic>=2.0
+
+# Environment variables
+python-dotenv
+
+# Type hints
+typing-extensions

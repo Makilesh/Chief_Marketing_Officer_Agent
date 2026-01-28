@@ -1,0 +1,72 @@
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.venv\
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environment files
+.env
+.env.local
+!.env.example
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# LangGraph / CrewAI / model caches
+.langgraph/
+.crewai/
+.cache/
+models/
+model_cache/
+.ollama/
+
+# Memory layer - exclude campaign files but keep seed data
+memory/campaigns/*.json
+!memory/seed_data.json
+
+# Logs
+*.log
+logs/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Secrets and keys
+*.pem
+*.key
+
+# Groq/Ollama specific
+ollama_data/
+
+# Ignore local generated files
+*.sqlite3
+
+exp/
+# End of .gitignore

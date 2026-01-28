@@ -1,0 +1,170 @@
+[
+  {
+    "campaign_id": "demo-001",
+    "timestamp": "2025-12-15T10:00:00Z",
+    "problem_type": "cac_increase",
+    "problem_text": "CAC increased 35% over the past 2 months. Our customer acquisition cost jumped from $150 to $210 and we need to diagnose why and fix it.",
+    "context": {
+      "business_type": "B2B SaaS",
+      "channels": ["Google Ads", "LinkedIn", "Content Marketing"],
+      "budget": "$5K/month",
+      "timeline": "2 weeks"
+    },
+    "diagnosis": "Ad creative fatigue on Google Ads - CTR dropped 25% while LinkedIn remained stable",
+    "strategy_chosen": "Refresh Google Ads creative with new variants and shift 20% budget to LinkedIn as fallback",
+    "outcome": {
+      "success": true,
+      "result": "CAC reduced from $210 to $165 within 3 weeks",
+      "confidence": 0.85
+    },
+    "priority": 0.9,
+    "lessons_learned": "Always verify design resource availability before committing to creative refresh timeline"
+  },
+  {
+    "campaign_id": "demo-002",
+    "timestamp": "2025-11-20T14:30:00Z",
+    "problem_type": "cac_increase",
+    "problem_text": "Customer acquisition cost spiked 50% after increasing Google Ads bids to compete with new market entrant.",
+    "context": {
+      "business_type": "B2B SaaS",
+      "channels": ["Google Ads", "Facebook"],
+      "budget": "$8K/month",
+      "timeline": "1 month"
+    },
+    "diagnosis": "Increased competition in Google Ads auction driving up CPC without corresponding conversion improvement",
+    "strategy_chosen": "Increase bids to maintain position and outspend competitor",
+    "outcome": {
+      "success": false,
+      "result": "Budget overrun by 40%, CAC increased further to $280",
+      "confidence": 0.7
+    },
+    "priority": 0.3,
+    "lessons_learned": "Don't increase bids without efficiency analysis - consider alternative channels instead of bidding wars"
+  },
+  {
+    "campaign_id": "demo-003",
+    "timestamp": "2025-12-28T09:15:00Z",
+    "problem_type": "lead_quality",
+    "problem_text": "Lead quality dropped significantly. SQLs from content marketing decreased 40% while MQLs stayed flat.",
+    "context": {
+      "business_type": "B2B SaaS",
+      "channels": ["Content Marketing", "Webinars", "Email"],
+      "budget": "$3K/month",
+      "timeline": "3 weeks"
+    },
+    "diagnosis": "Content attracting wrong audience - targeting too broad, missing decision-maker personas",
+    "strategy_chosen": "Narrow content targeting to focus on VP/Director level decision makers with specific pain points",
+    "outcome": {
+      "success": true,
+      "result": "SQL rate improved from 12% to 28% within 4 weeks",
+      "confidence": 0.8
+    },
+    "priority": 0.85,
+    "lessons_learned": "Lead quality issues often stem from targeting, not content quality - check audience first"
+  },
+  {
+    "campaign_id": "demo-004",
+    "timestamp": "2025-10-05T11:00:00Z",
+    "problem_type": "lead_quality",
+    "problem_text": "Leads from LinkedIn campaign are not converting. High volume but low quality prospects.",
+    "context": {
+      "business_type": "B2B Enterprise",
+      "channels": ["LinkedIn Ads", "LinkedIn Organic"],
+      "budget": "$10K/month",
+      "timeline": "2 weeks"
+    },
+    "diagnosis": "LinkedIn targeting too broad - capturing interest from individual contributors instead of buyers",
+    "strategy_chosen": "Implement job title and seniority filters, add company size requirements",
+    "outcome": {
+      "success": true,
+      "result": "Lead volume dropped 60% but SQL conversion rate tripled",
+      "confidence": 0.75
+    },
+    "priority": 0.7,
+    "lessons_learned": "Quality over quantity - tighter targeting reduces volume but improves pipeline value"
+  },
+  {
+    "campaign_id": "demo-005",
+    "timestamp": "2025-12-01T16:45:00Z",
+    "problem_type": "product_launch",
+    "problem_text": "Launching new AI feature in 4 weeks. Need to generate awareness and drive trials for premium tier.",
+    "context": {
+      "business_type": "B2B SaaS - Analytics Platform",
+      "channels": ["Email", "LinkedIn", "Webinars", "Product Hunt"],
+      "budget": "$15K",
+      "timeline": "4 weeks pre-launch, 4 weeks post-launch"
+    },
+    "diagnosis": "Primary challenge is educating existing customers about AI value proposition before acquisition",
+    "strategy_chosen": "Customer-first launch - beta program for existing accounts, then expand to new prospects",
+    "outcome": {
+      "success": true,
+      "result": "150 beta signups from existing customers, 45% converted to paid AI tier",
+      "confidence": 0.82
+    },
+    "priority": 0.88,
+    "lessons_learned": "Existing customers are fastest path to new feature adoption - leverage them before broad launch"
+  },
+  {
+    "campaign_id": "demo-006",
+    "timestamp": "2025-09-15T08:30:00Z",
+    "problem_type": "engagement_drop",
+    "problem_text": "Email engagement dropped 30%. Open rates and CTR declining across all campaigns.",
+    "context": {
+      "business_type": "B2B SaaS",
+      "channels": ["Email Marketing", "Newsletter"],
+      "budget": "$2K/month",
+      "timeline": "3 weeks"
+    },
+    "diagnosis": "Email list fatigue - sending too frequently without segmentation or personalization",
+    "strategy_chosen": "Reduce frequency, implement engagement-based segmentation, add personalization",
+    "outcome": {
+      "success": true,
+      "result": "Open rates recovered from 15% to 28%, CTR doubled",
+      "confidence": 0.78
+    },
+    "priority": 0.75,
+    "lessons_learned": "More emails != more engagement. Segment by engagement level and adjust frequency accordingly"
+  },
+  {
+    "campaign_id": "demo-007",
+    "timestamp": "2025-11-01T13:20:00Z",
+    "problem_type": "engagement_drop",
+    "problem_text": "Website engagement metrics tanking. Bounce rate up 40%, time on site down significantly.",
+    "context": {
+      "business_type": "B2B SaaS",
+      "channels": ["SEO", "Content Marketing", "Google Ads"],
+      "budget": "$5K/month",
+      "timeline": "1 month"
+    },
+    "diagnosis": "Traffic source shift - more paid traffic with lower intent compared to organic",
+    "strategy_chosen": "Improve landing page relevance for paid campaigns, better ad-to-page message match",
+    "outcome": {
+      "success": true,
+      "result": "Bounce rate reduced from 65% to 42%, conversions up 25%",
+      "confidence": 0.72
+    },
+    "priority": 0.68,
+    "lessons_learned": "Always check traffic source mix when engagement changes - different sources have different intent"
+  },
+  {
+    "campaign_id": "demo-008",
+    "timestamp": "2025-08-20T10:00:00Z",
+    "problem_type": "budget_optimization",
+    "problem_text": "Need to optimize $20K monthly budget across channels. Current allocation feels inefficient.",
+    "context": {
+      "business_type": "B2B SaaS",
+      "channels": ["Google Ads", "LinkedIn", "Content", "Events"],
+      "budget": "$20K/month",
+      "timeline": "Ongoing optimization"
+    },
+    "diagnosis": "Budget spread too thin across channels - no channel has enough investment to reach critical mass",
+    "strategy_chosen": "Focus 70% budget on top 2 performing channels, reduce others to maintenance mode",
+    "outcome": {
+      "success": true,
+      "result": "Overall ROAS improved from 1.8x to 2.6x by concentrating spend",
+      "confidence": 0.8
+    },
+    "priority": 0.76,
+    "lessons_learned": "Concentration beats diversification at smaller budgets - dominate 2 channels vs. mediocre at 5"
+  }
+]

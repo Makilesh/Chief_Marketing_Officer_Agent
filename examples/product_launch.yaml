@@ -1,0 +1,44 @@
+# Example: Product Launch Campaign
+# Usage: python main.py --config examples/product_launch.yaml
+
+problem: |
+  We're launching a new AI-powered analytics feature in 6 weeks.
+  This is our first major product launch and we need a go-to-market strategy
+  that generates awareness, drives trial signups, and converts to paid.
+  
+  Previous feature releases got minimal attention. We need this one to be different.
+
+context:
+  business_type: "B2B SaaS - Analytics Platform"
+  mrr: "$120K MRR"
+  current_customers: "450 accounts"
+  target_segment: "Mid-market companies (100-1000 employees)"
+  product_positioning: "AI analytics that finds insights humans miss"
+  competitive_landscape: "Competing with Mixpanel, Amplitude, and emerging AI tools"
+  
+  launch_goals:
+    awareness: "10,000 feature page views"
+    trials: "500 feature trials"
+    conversions: "50 upgrades to AI tier ($99/month add-on)"
+  
+  available_budget: "$20K launch budget"
+  
+  assets_available:
+    - "Product demo video (in production)"
+    - "Case study from 3 beta customers"
+    - "Email list of 8,000 subscribers"
+    - "LinkedIn company page (5,000 followers)"
+    - "Monthly webinar series (avg 150 attendees)"
+  
+  team_resources: 
+    - "1 product marketing manager (lead)"
+    - "1 content marketer"
+    - "Engineering support for landing pages"
+    - "CEO available for 2-3 podcast appearances"
+  
+  timeline: "6 weeks to launch, campaign runs 4 weeks post-launch"
+  
+  constraints:
+    - "Cannot offer discounts (premium positioning)"
+    - "Limited paid ad experience internally"
+    - "Need to coordinate with product team on feature readiness"

@@ -1,0 +1,28 @@
+# Example: Lead Quality Issue
+# Usage: python main.py --config examples/lead_quality.yaml
+
+problem: |
+  Our lead volume is up 30% but sales conversion rate dropped from 15% to 8%.
+  Sales team reports that leads are "tire kickers" and not decision makers.
+  Need to improve lead quality without sacrificing volume too much.
+
+context:
+  business_type: "B2B Enterprise Software"
+  arr: "$2M ARR"
+  average_deal_size: "$25K"
+  sales_cycle: "3-6 months"
+  current_channels: "LinkedIn Ads, Content Marketing, Webinars, SDR Outreach"
+  monthly_budget: "$15K/month"
+  lead_sources:
+    linkedin: "40% of leads, 12% conversion"
+    content: "35% of leads, 6% conversion"
+    webinars: "15% of leads, 18% conversion"
+    referrals: "10% of leads, 25% conversion"
+  target_metrics:
+    sql_rate: "25%"
+    win_rate: "15%"
+  current_metrics:
+    sql_rate: "18%"
+    win_rate: "8%"
+  team_resources: "2 marketing managers, 1 content writer, agency for paid"
+  timeline_constraint: "Q2 pipeline targets at risk, need improvement in 4 weeks"
