@@ -173,9 +173,10 @@ def parse_json_output(text: str) -> dict:
 ## 🔮 Future Enhancements
 
 ### Short-term (Week 1-2)
-- [ ] Vector DB integration (Pinecone/Weaviate) for campaign memory
-- [ ] Retrieval of past campaign outcomes to inform strategy
-- [ ] Parameterized critic thresholds via config
+- [ ] Vector DB integration (Pinecone/Weaviate) for semantic campaign retrieval
+- [x] ~~Keyword-based campaign memory retrieval~~ ✅ Implemented in `memory.py`
+- [x] ~~Retrieval of past campaign outcomes to inform strategy~~ ✅ Analyst receives memory context
+- [x] ~~Parameterized critic thresholds via config~~ ✅ Available via environment variables
 
 ### Medium-term (Month 1)
 - [ ] Evaluation framework: track decision quality over time
@@ -218,5 +219,6 @@ This design document describes the architecture. See the code for implementation
 - `agents.py` — CrewAI agent definitions
 - `models.py` — Pydantic output schemas
 - `config.py` — LLM configuration
+- `memory.py` — Campaign memory layer
 
-Run tests: `python test_workflow.py`
+Test the system: `python main.py --demo --mock`

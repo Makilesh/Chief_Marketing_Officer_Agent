@@ -37,15 +37,14 @@ An intelligent **AI Chief Marketing Officer** that analyzes marketing problems, 
 | **Orchestration** | LangGraph | State management, conditional routing, checkpointing |
 | **Agents** | CrewAI | Role-based specialist agents with structured outputs |
 | **Primary LLM** | Gemini 2.5 Flash | Fast, capable reasoning model |
-| **Planner Fallback** | Qwen 2.5 14B (Ollama) | Local fallback for Analyst & Strategy |
-| **Execution Fallback** | Llama 3.1 8B (Ollama) | Local fallback for Execution & Critic |
+| **Fallback LLM** | Llama 3.1 8B (Ollama) | Local fallback for all agents |
 
 ### Agent Roles
 
 | Agent | Role | Fallback Model |
 |-------|------|----------------|
-| **Analyst** | Diagnoses problems, identifies root causes | Qwen 2.5 14B |
-| **Strategy** | Generates 2-3 viable strategies with trade-offs | Qwen 2.5 14B |
+| **Analyst** | Diagnoses problems, identifies root causes | Llama 3.1 8B |
+| **Strategy** | Generates 2-3 viable strategies with trade-offs | Llama 3.1 8B |
 | **Execution** | Selects strategy and creates action plan | Llama 3.1 8B |
 | **Critic** | Challenges assumptions, scores severity | Llama 3.1 8B |
 
@@ -55,7 +54,7 @@ An intelligent **AI Chief Marketing Officer** that analyzes marketing problems, 
 - **Severity 0.3-0.7**: Refine strategy (loop to Execution) 🔄
 - **Severity > 0.7**: Reject & replan (loop to Strategy) ❌
 
-## � Design Philosophy
+## 🎯 Design Philosophy
 
 ### Why LangGraph + CrewAI?
 
@@ -94,7 +93,7 @@ This is **agentic reasoning**, not template filling.
 ## 📁 Project Structure
 
 ```
-CMO AGENTIC AI/
+Chief_Marketing_Agent/
 ├── main.py            # Entry point with CLI (interactive/config/demo modes)
 ├── workflow.py        # LangGraph workflow with conditional routing
 ├── agents.py          # CrewAI agent definitions & task factories
@@ -137,17 +136,19 @@ When enabled, the Analyst agent receives context from relevant past campaigns:
 
 ### 1. Setup Environment
 
+**Requirements:** Python 3.10+
+
 ```bash
 python -m venv .venv
 .venv\Scripts\activate  # Windows
+# source .venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
 ### 2. Pull Ollama Models (for local fallback)
 
 ```bash
-ollama pull qwen2.5:14b    # Planner agents fallback
-ollama pull llama3.1:8b    # Execution agents fallback
+ollama pull llama3.1:8b    # Fallback for all agents
 ```
 
 ### 3. Configure API Keys
@@ -268,6 +269,37 @@ SEVERITY_REFINE_THRESHOLD = 0.7     # Refine if between, Reject if above
 | `langchain-google-genai` | Gemini integration |
 | `langchain-ollama` | Local model fallback |
 | `pydantic` | Structured outputs |
+
+## � Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| `GOOGLE_API_KEY not set` | Create `.env` file with your Google AI API key |
+| Ollama connection failed | Ensure Ollama is running: `ollama serve` |
+| Model not found | Pull the model first: `ollama pull llama3.1:8b` |
+| JSON parse errors | Normal - system continues with graceful fallback |
+| Infinite loop warnings | Already handled - max 3 iterations enforced |
+| Memory errors | Set `MEMORY_ENABLED=false` to disable memory layer |
+
+### Common Environment Variables
+
+```bash
+# Required
+GOOGLE_API_KEY=your_key_here
+
+# Optional overrides
+USE_OLLAMA=true                    # Force Ollama fallback
+MEMORY_ENABLED=true                # Enable campaign memory
+CREW_VERBOSE=true                  # Show agent reasoning
+OLLAMA_BASE_URL=http://localhost:11434  # Ollama endpoint
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Make your changes and test with `python main.py --demo --mock`
+4. Submit a pull request
 
 ## 📄 License
 
