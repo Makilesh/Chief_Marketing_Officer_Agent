@@ -25,9 +25,8 @@ An intelligent **AI Chief Marketing Officer** that analyzes marketing problems, 
          │  Final        └──────────┘   │    │
          │ Decision                     │    │
          │               └──────────────┘    │
-         │                                   │
          └───────────────────────────────────┘
-                   (Max 3 iterations)
+                    (Max 3 iterations)
 ```
 
 ### Technology Stack
@@ -41,12 +40,12 @@ An intelligent **AI Chief Marketing Officer** that analyzes marketing problems, 
 
 ### Agent Roles
 
-| Agent | Role | Fallback Model |
-|-------|------|----------------|
-| **Analyst** | Diagnoses problems, identifies root causes | Llama 3.1 8B |
-| **Strategy** | Generates 2-3 viable strategies with trade-offs | Llama 3.1 8B |
-| **Execution** | Selects strategy and creates action plan | Llama 3.1 8B |
-| **Critic** | Challenges assumptions, scores severity | Llama 3.1 8B |
+| Agent | Role |
+|-------|------|
+| **Analyst** | Diagnoses problems, identifies root causes |
+| **Strategy** | Generates 2-3 viable strategies with trade-offs |
+| **Execution** | Selects strategy and creates action plan |
+| **Critic** | Challenges assumptions, scores severity |
 
 ### Decision Logic
 
@@ -270,7 +269,7 @@ SEVERITY_REFINE_THRESHOLD = 0.7     # Refine if between, Reject if above
 | `langchain-ollama` | Local model fallback |
 | `pydantic` | Structured outputs |
 
-## � Troubleshooting
+## 🛠 Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
