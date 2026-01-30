@@ -37,16 +37,16 @@ An intelligent **AI Chief Marketing Officer** that analyzes marketing problems, 
 | **Orchestration** | LangGraph | State management, conditional routing, checkpointing |
 | **Agents** | CrewAI | Role-based specialist agents with structured outputs |
 | **Primary LLM** | Gemini 2.5 Flash | Fast, capable reasoning model |
-| **Fallback LLM** | Llama 3.1 8B (Ollama) | Local fallback for all agents |
+| **Fallback LLM** | gpt-oss 20B (Ollama) | Local fallback for all agents |
 
 ### Agent Roles
 
-| Agent | Role | Fallback Model |
-|-------|------|----------------|
-| **Analyst** | Diagnoses problems, identifies root causes | Llama 3.1 8B |
-| **Strategy** | Generates 2-3 viable strategies with trade-offs | Llama 3.1 8B |
-| **Execution** | Selects strategy and creates action plan | Llama 3.1 8B |
-| **Critic** | Challenges assumptions, scores severity | Llama 3.1 8B |
+| Agent | Role |
+|-------|------|
+| **Analyst** | Diagnoses problems, identifies root causes |
+| **Strategy** | Generates 2-3 viable strategies with trade-offs |
+| **Execution** | Selects strategy and creates action plan |
+| **Critic** | Challenges assumptions, scores severity |
 
 ### Decision Logic
 
@@ -148,7 +148,7 @@ pip install -r requirements.txt
 ### 2. Pull Ollama Models (for local fallback)
 
 ```bash
-ollama pull llama3.1:8b    # Fallback for all agents
+ollama pull gpt-oss:20b    # Fallback for all agents (local Ollama model)
 ```
 
 ### 3. Configure API Keys
@@ -276,7 +276,7 @@ SEVERITY_REFINE_THRESHOLD = 0.7     # Refine if between, Reject if above
 |-------|----------|
 | `GOOGLE_API_KEY not set` | Create `.env` file with your Google AI API key |
 | Ollama connection failed | Ensure Ollama is running: `ollama serve` |
-| Model not found | Pull the model first: `ollama pull llama3.1:8b` |
+| Model not found | Pull the model first: `ollama pull gpt-oss:20b` |
 | JSON parse errors | Normal - system continues with graceful fallback |
 | Infinite loop warnings | Already handled - max 3 iterations enforced |
 | Memory errors | Set `MEMORY_ENABLED=false` to disable memory layer |

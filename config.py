@@ -2,8 +2,7 @@
 
 LLM Setup:
 - Primary: Gemini 2.5 Flash (Google)
-- Planner Fallback: Qwen 2.5 14B (Ollama) - for Analyst & Strategy agents
-- Execution Fallback: Llama 3.1 8B (Ollama) - for Execution & Critic agents
+- Local Ollama Fallback: gpt-oss 20B (Ollama) - used as the default local fallback for agents
 """
 
 import os
@@ -60,9 +59,9 @@ OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 USE_OLLAMA = os.getenv("USE_OLLAMA", "true").lower() == "true"  # Default to true now
 
 # Ollama Models for different agent types
-# Using llama3.1:8b for all agents to avoid Chinese text mixing from Qwen
-OLLAMA_PLANNER_MODEL = os.getenv("OLLAMA_PLANNER_MODEL", "llama3.1:8b")  # Analyst & Strategy
-OLLAMA_EXECUTION_MODEL = os.getenv("OLLAMA_EXECUTION_MODEL", "llama3.1:8b")  # Execution & Critic
+# Default to `gpt-oss:20b` for local Ollama fallback (used for all agents unless overridden)
+OLLAMA_PLANNER_MODEL = os.getenv("OLLAMA_PLANNER_MODEL", "gpt-oss:20b")  # Analyst & Strategy
+OLLAMA_EXECUTION_MODEL = os.getenv("OLLAMA_EXECUTION_MODEL", "gpt-oss:20b")  # Execution & Critic
 
 # =============================================================================
 # Workflow Configuration
@@ -101,7 +100,7 @@ def get_llm_for_agent(agent_type: str):
     """Get appropriate LLM for the specified agent type.
     
     Primary: Gemini 2.5 Flash (if GOOGLE_API_KEY set and USE_OLLAMA=false)
-    Fallback: Ollama (llama3.1:8b via OpenAI-compatible endpoint)
+    Fallback: Ollama (gpt-oss:20b via OpenAI-compatible endpoint)
     
     Args:
         agent_type: One of 'analyst', 'strategy', 'execution', 'critic'

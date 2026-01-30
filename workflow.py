@@ -196,11 +196,11 @@ def parse_json_output(text: str) -> dict[str, Any]:
 def analyst_node(state: CMOState) -> dict:
     """Run the Analyst agent to diagnose the problem.
     
-    Uses: Gemini 2.5 Flash (primary) → Qwen 2.5 14B (fallback)
+    Uses: Gemini 2.5 Flash (primary) → gpt-oss 20B (fallback)
     Optionally retrieves relevant past campaigns from memory.
     """
     logger.info("[Analyst] Diagnosing problem...")
-    logger.info("[Analyst] LLM: Gemini 2.5 Flash → Qwen 2.5 14B fallback")
+    logger.info("[Analyst] LLM: Gemini 2.5 Flash → gpt-oss 20B fallback")
     
     # Memory retrieval (optional, graceful degradation)
     memory_context = None
@@ -263,10 +263,10 @@ def analyst_node(state: CMOState) -> dict:
 def strategy_node(state: CMOState) -> dict:
     """Run the Strategy agent to generate options.
     
-    Uses: Gemini 2.5 Flash (primary) → Qwen 2.5 14B (fallback)
+    Uses: Gemini 2.5 Flash (primary) → gpt-oss 20B (fallback)
     """
     logger.info("[Strategy] Generating strategy options...")
-    logger.info("[Strategy] LLM: Gemini 2.5 Flash → Qwen 2.5 14B fallback")
+    logger.info("[Strategy] LLM: Gemini 2.5 Flash → gpt-oss 20B fallback")
     
     if not state.get("analyst_output"):
         return {"error": "No analyst output available"}

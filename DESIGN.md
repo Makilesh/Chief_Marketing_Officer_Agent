@@ -65,7 +65,7 @@ This is **agentic reasoning**, not template filling.
 | **Orchestration** | LangGraph | Explicit state management, conditional routing, iteration control |
 | **Agents** | CrewAI | Role-based specialists with structured outputs, built-in delegation |
 | **Primary LLM** | Gemini 2.5 Flash | Fast, capable, good at structured JSON output |
-| **Fallback LLM** | Ollama (Llama 3.1 8B) | Local execution, no API costs, offline capability |
+| **Fallback LLM** | Ollama (gpt-oss 20B) | Local execution, no API costs, offline capability |
 
 ### Agent Roles
 
