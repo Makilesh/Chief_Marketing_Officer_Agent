@@ -25,9 +25,8 @@ An intelligent **AI Chief Marketing Officer** that analyzes marketing problems, 
          │  Final        └──────────┘   │    │
          │ Decision                     │    │
          │               └──────────────┘    │
-         │                                   │
          └───────────────────────────────────┘
-                   (Max 3 iterations)
+                    (Max 3 iterations)
 ```
 
 ### Technology Stack
@@ -270,7 +269,7 @@ SEVERITY_REFINE_THRESHOLD = 0.7     # Refine if between, Reject if above
 | `langchain-ollama` | Local model fallback |
 | `pydantic` | Structured outputs |
 
-## � Troubleshooting
+## 🛠 Troubleshooting
 
 | Issue | Solution |
 |-------|----------|
