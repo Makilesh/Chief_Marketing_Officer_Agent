@@ -22,7 +22,7 @@
   },
   {
     "campaign_id": "demo-002",
-    "timestamp": "2025-11-20T14:30:00Z",
+    "timestamp": "2025-11-20 14:30:00",
     "problem_type": "cac_increase",
     "problem_text": "Customer acquisition cost spiked 50% after increasing Google Ads bids to compete with new market entrant.",
     "context": {
@@ -43,7 +43,7 @@
   },
   {
     "campaign_id": "demo-003",
-    "timestamp": "2025-12-28T09:15:00Z",
+    "timestamp": "12/28/2025 09:15AM",
     "problem_type": "lead_quality",
     "problem_text": "Lead quality dropped significantly. SQLs from content marketing decreased 40% while MQLs stayed flat.",
     "context": {
@@ -81,11 +81,11 @@
       "confidence": 0.75
     },
     "priority": 0.7,
-    "lessons_learned": "Quality over quantity - tighter targeting reduces volume but improves pipeline value"
+    "lessons_learned": "Quality over quantity — tighter targeting reduces volume but improves pipeline value"
   },
   {
     "campaign_id": "demo-005",
-    "timestamp": "2025-12-01T16:45:00Z",
+    "timestamp": "2025-12-01T16:45:00-08:00",
     "problem_type": "product_launch",
     "problem_text": "Launching new AI feature in 4 weeks. Need to generate awareness and drive trials for premium tier.",
     "context": {
@@ -119,7 +119,7 @@
     "strategy_chosen": "Reduce frequency, implement engagement-based segmentation, add personalization",
     "outcome": {
       "success": true,
-      "result": "Open rates recovered from 15% to 28%, CTR doubled",
+      "result": "Open rates recovered from ~15% to 28%; CTR roughly doubled — team saw clear lift",
       "confidence": 0.78
     },
     "priority": 0.75,
@@ -127,7 +127,7 @@
   },
   {
     "campaign_id": "demo-007",
-    "timestamp": "2025-11-01T13:20:00Z",
+    "timestamp": "2025/11/01 13:20",
     "problem_type": "engagement_drop",
     "problem_text": "Website engagement metrics tanking. Bounce rate up 40%, time on site down significantly.",
     "context": {
